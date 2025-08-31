@@ -123,75 +123,41 @@
   {% endif %}
 
   {% include metadata-hook.html %}
-  <script type="application/ld+json">
+  {% if page.title == "Origins" %}
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
+  "@id": "{{ '/' | absolute_url }}#person",
   "name": "Osama Siddiqui",
-  "alternateName": ["Osama Sudo", "Osama Network Security Engineer"],
-  "url": "https://sudoosama.com/",
-  "image": "https://sudoosama.com/images/osama.jpg",
+  "alternateName": ["Osama Sudo", "Sudo Osama", "Osama Network Security Engineer"],
+  "url": "{{ '/' | absolute_url }}",
+  "image": "{{ '/images/osama.jpg' | absolute_url }}",
   "email": "mailto:osamasiddiqui67262@gmail.com",
   "telephone": "+971506484162",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Dubai",
-    "addressCountry": "UAE"
-  },
+  "address": { "@type": "PostalAddress", "addressLocality": "Dubai", "addressCountry": "UAE" },
   "jobTitle": "Senior Network Security Engineer",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Digital Auxilius"
-  },
+  "worksFor": { "@type": "Organization", "name": "Digital Auxilius" },
   "alumniOf": [
-    {
-      "@type": "CollegeOrUniversity",
-      "name": "University of Karachi"
-    },
-    {
-      "@type": "CollegeOrUniversity",
-      "name": "NED University of Engineering & Technology"
-    }
+    { "@type": "CollegeOrUniversity", "name": "University of Karachi" },
+    { "@type": "CollegeOrUniversity", "name": "NED University of Engineering & Technology" }
   ],
   "knowsAbout": [
-    "Network Security",
-    "Firewalls (Fortinet, Cisco ASA/Firepower, Palo Alto, Sophos)",
-    "VPNs (IPsec, SSL, Remote Access)",
-    "Zero Trust",
-    "802.1X NAC",
-    "Routing (OSPF, BGP, SD-WAN)",
-    "Active Directory & Windows Server",
-    "Linux Administration",
-    "Cloud (AWS, Azure, Microsoft 365)",
-    "Virtualization (VMware ESXi, Hyper-V)",
-    "SIEM & Monitoring (Zabbix, Wazuh, Nessus, PRTG)"
+    "Network Security","Firewalls (Fortinet, Cisco ASA/Firepower, Palo Alto, Sophos)","VPNs (IPsec, SSL, Remote Access)",
+    "Zero Trust","802.1X NAC","Routing (OSPF, BGP, SD-WAN)","Active Directory & Windows Server","Linux Administration",
+    "Cloud (AWS, Azure, Microsoft 365)","Virtualization (VMware ESXi, Hyper-V)","SIEM & Monitoring (Zabbix, Wazuh, Nessus, PRTG)"
   ],
   "sameAs": [
     "https://www.linkedin.com/in/osamasiddiquii",
     "https://www.credly.com/users/0sama"
   ],
   "hasCredential": [
-    {
-      "@type": "EducationalOccupationalCredential",
-      "credentialCategory": "Certification",
-      "name": "CCNA – Cisco Certified Network Associate"
-    },
-    {
-      "@type": "EducationalOccupationalCredential",
-      "credentialCategory": "Certification",
-      "name": "Fortinet Certified Cybersecurity Associate (FCA)"
-    },
-    {
-      "@type": "EducationalOccupationalCredential",
-      "credentialCategory": "Certification",
-      "name": "FortiGate 7.4 Operator"
-    },
-    {
-      "@type": "EducationalOccupationalCredential",
-      "credentialCategory": "Certification",
-      "name": "ISO/IEC 27001 Information Security Associate"
-    }
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "Certification", "name": "CCNA – Cisco Certified Network Associate" },
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "Certification", "name": "Fortinet Certified Cybersecurity Associate (FCA)" },
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "Certification", "name": "FortiGate 7.4 Operator" },
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "Certification", "name": "ISO/IEC 27001 Information Security Associate" }
   ]
 }
 </script>
+{% endif %}
 </head>
