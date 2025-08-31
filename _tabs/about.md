@@ -2,6 +2,7 @@
 icon: fas fa-info-circle
 order: 4
 title: Origins
+schema_person: true
 ---
 
 # Hey 👋 I’m Osama.  
