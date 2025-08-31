@@ -1,6 +1,6 @@
 ---
 title: "How I Got Hooked on Networking (and Why Security Starts Here)"
-date: 2025-08-30 12:00:00 +0400
+date: 2025-08-31 12:50:00 +0400
 categories: [Journey, Networking]
 tags: [networking, cybersecurity, ccna, labs, story]
 author: Osama Siddiqui
