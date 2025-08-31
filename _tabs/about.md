@@ -7,26 +7,15 @@ order: 4
 
 Hey 👋, I’m Osama.  
 
-I’ve been messing with computers since I was about **10 years old**.  
-Back then, I had this unshakable habit: every week I’d break something on my PC, and then spend nights figuring out how to fix it.  
-That cycle of *break → learn → fix* shaped me into who I am today.  
+I’ve been messing with computers since I was a kid — the kind who couldn’t go a week without breaking something on purpose, just to figure out how to fix it later. That curiosity slowly grew into a love for **technology and security**.  
 
-I’ve always been fascinated by **hacking**. But the deeper I went, the more I realized that real hacking isn’t about “cool tools” — it’s about **understanding how systems actually work**.  
-At some point, I stumbled upon a meme (which I’ve put in my blog) that said:  
+These days, I spend most of my time deep in **networking and cybersecurity labs**, building and breaking things, and writing about what I learn along the way.  
 
-> *Before you learn cybersecurity, learn networking first.*  
+This site is my little corner of the internet where I:  
+- Share notes, configs, and scripts I’ve written  
+- Document my labs (the good, the bad, the broken 😅)  
+- Post blogs about security concepts that clicked for me  
 
-That became my philosophy.  
+When I’m not labbing, you’ll find me hacking away on platforms like **HackTheBox**, or grinding toward the next certification milestone.  
 
-So in **December 2023**, I earned my **CCNA**, then moved on to **FortiGate certs** and **ISO 27001 Associate**.  
-Right now, I’m chasing down **CCNP Security** and aiming for the beast — **CCIE Security**.  
-
-Outside of labs, I hack on **HackTheBox** ([here’s my profile](https://app.hackthebox.com/profile/1774484)) where I put theory into practice.  
-
-This site is where I’ll share my journey:  
-- Technical blogs  
-- Network & security labs  
-- Scripts and tools I use  
-- Random notes I’d want if I was starting out again  
-
-If you’re here, welcome. 🚀  
+If you’re into networking, security, or just like watching someone learn out loud — welcome aboard 🚀.  
