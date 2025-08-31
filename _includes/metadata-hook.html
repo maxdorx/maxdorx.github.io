@@ -1,4 +1,4 @@
-{% if page.url == "/about/" or page.permalink == "/about/" or page.schema_person %}
+{% if page.schema_person %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -20,10 +20,10 @@
   "knowsAbout": ["Network Security","Firewalls (Fortinet, Cisco ASA/Firepower, Palo Alto, Sophos)","VPNs (IPsec, SSL, Remote Access)","Zero Trust","802.1X NAC","Routing (OSPF, BGP, SD-WAN)","Active Directory & Windows Server","Linux Administration","Cloud (AWS, Azure, Microsoft 365)","Virtualization (VMware ESXi, Hyper-V)","SIEM & Monitoring (Zabbix, Wazuh, Nessus, PRTG)"],
   "sameAs": ["https://www.linkedin.com/in/osamasiddiquii","https://www.credly.com/users/0sama"],
   "hasCredential": [
-    { "@type": "EducationalOccupationalCredential", "credentialCategory": "Certification", "name": "CCNA – Cisco Certified Network Associate" },
-    { "@type": "EducationalOccupationalCredential", "credentialCategory": "Certification", "name": "Fortinet Certified Cybersecurity Associate (FCA)" },
-    { "@type": "EducationalOccupationalCredential", "credentialCategory": "Certification", "name": "FortiGate 7.4 Operator" },
-    { "@type": "EducationalOccupationalCredential", "credentialCategory": "Certification", "name": "ISO/IEC 27001 Information Security Associate" }
+    { "@type": "EducationalOccupationalCredential", "name": "CCNA – Cisco Certified Network Associate" },
+    { "@type": "EducationalOccupationalCredential", "name": "Fortinet Certified Cybersecurity Associate (FCA)" },
+    { "@type": "EducationalOccupationalCredential", "name": "FortiGate 7.4 Operator" },
+    { "@type": "EducationalOccupationalCredential", "name": "ISO/IEC 27001 Information Security Associate" }
   ]
 }
 </script>
