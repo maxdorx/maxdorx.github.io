@@ -3,9 +3,7 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-# About Me
-
-Hey 👋 I’m Osama.  
+# Hey 👋 I’m Osama.  
 
 I’ve always been the kind of person who takes things apart just to see how they work. That habit followed me into tech — breaking, fixing, and re-building computers, networks, and servers until it finally became a career.  
 
