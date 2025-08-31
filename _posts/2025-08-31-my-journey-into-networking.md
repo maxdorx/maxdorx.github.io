@@ -20,7 +20,7 @@ The deeper I went down the rabbit hole, the more I realized something important.
 
 I came across this meme 👇 and it couldn’t be more true:  
 
-![FREE Cybersecurity Advice](../assets/img/meme-network-fundamentals.jpeg)  
+![FREE Cybersecurity Advice](/assets/img/meme-network-fundamentals.jpeg)  
 
 It hit me: before you can be great at cybersecurity, you **must** master networking.  
 If you don’t understand how packets move, how routers forward, or how firewalls inspect — your “security” is just guesswork.  
