@@ -123,7 +123,8 @@
   {% endif %}
 
   {% include metadata-hook.html %}
-  {% if page.title == "Origins" or page.url == "/about/" or page.permalink == "/about/" %}
+{% if page.url == "/about/" or page.permalink == "/about/" %}
+  <!-- Person JSON-LD -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
