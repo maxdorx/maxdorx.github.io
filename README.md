@@ -1,1 +1,1 @@
-sudoosama dot com
+https://sudoosama.com/
