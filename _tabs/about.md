@@ -1,21 +1,22 @@
----
 icon: fas fa-info-circle
 order: 4
 ---
 
 # About Me
 
-Hey 👋, I’m Osama.  
+Hey 👋 I’m Osama.  
 
-I’ve been messing with computers since I was a kid — the kind who couldn’t go a week without breaking something on purpose, just to figure out how to fix it later. That curiosity slowly grew into a love for **technology and security**.  
+I’ve always been the kind of person who takes things apart just to see how they work. That habit followed me into tech — breaking, fixing, and re-building computers, networks, and servers until it finally became a career.  
 
-These days, I spend most of my time deep in **networking and cybersecurity labs**, building and breaking things, and writing about what I learn along the way.  
+Right now, I work as a **Senior Network Engineer**, looking after everything from firewalls and switches to servers and cloud platforms. I started out onsite, but these days I’m mostly based in Dubai, running a big chunk of enterprise infrastructure remotely.  
 
-This site is my little corner of the internet where I:  
-- Share notes, configs, and scripts I’ve written  
-- Document my labs (the good, the bad, the broken 😅)  
-- Post blogs about security concepts that clicked for me  
+Outside of the day job, I keep myself busy with side projects and labs. Some days it’s spinning up Cisco or Fortinet environments on EVE-NG, other days it’s tinkering with Hyper-V clusters, backup servers, or automating stuff with scripts. I like experimenting with **servers, virtualization, monitoring stacks, and security tools** just as much as I do with pure networking.  
 
-When I’m not labbing, you’ll find me hacking away on platforms like **HackTheBox**, or grinding toward the next certification milestone.  
+This site is where I drop all of that:  
+- Notes, configs, and fixes I wish I had when I first hit the problem  
+- Write-ups from my labs (the working ones and the disasters)  
+- Security concepts I’m studying for exams like CCNP Security and CCIE  
 
-If you’re into networking, security, or just like watching someone learn out loud — welcome aboard 🚀.  
+When I’m not in the lab, I’m usually learning for the next certification, testing new tools, or exploring ways to turn my skills into projects that help people.  
+
+If you’re into networks, servers, or security, you’ll probably find something familiar here.  
