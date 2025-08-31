@@ -7,7 +7,7 @@ order: 4
 
 I’ve always been the kind of person who takes things apart just to see how they work. That habit followed me into tech — breaking, fixing, and re-building computers, networks, and servers until it finally became a career.  
 
-Right now, I work as a **Senior Network Engineer**, looking after everything from firewalls and switches to servers and cloud platforms. I started out onsite, but these days I’m mostly based in Dubai, running a big chunk of enterprise infrastructure remotely.  
+Right now, I work as a **Senior Network Security Engineer**, looking after everything from firewalls and switches to servers and cloud platforms. I started out onsite, but these days I’m mostly based in Dubai, running a big chunk of enterprise infrastructure remotely.  
 
 Outside of the day job, I keep myself busy with side projects and labs. Some days it’s spinning up Cisco or Fortinet environments on EVE-NG, other days it’s tinkering with Hyper-V clusters, backup servers, or automating stuff with scripts. I like experimenting with **servers, virtualization, monitoring stacks, and security tools** just as much as I do with pure networking.  
 
