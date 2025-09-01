@@ -24,7 +24,6 @@ I decided to build a lightweight, script-driven solution for this. No extra lice
 The scripts handle:
 
 - Snapshot of **NGINX configs**
-- Archive of **Orion-Assets static files**
 - Stop/backup/restart of **SQL Server** Docker volumes
 - **PostgreSQL** logical dump (`pg_dumpall`)
 - **MongoDB** dumps from containers
@@ -54,7 +53,6 @@ Full repo: [linux-backup-scripts](https://github.com/maxdorx/linux-backup-script
 linux-backup-scripts/
 ├─ scripts/
 │  ├─ nginx-backup.sh
-│  ├─ orion-assets-backup.sh
 │  ├─ sqlserver-backup.sh
 │  ├─ postgres-backup.sh
 │  ├─ mongo-backup.sh
@@ -71,7 +69,7 @@ linux-backup-scripts/
 ## Example: NGINX config snapshot
 
 ```bash
-scp -P $REMOTE_PORT $tmp/${stamp}-nginx.conf     ${REMOTE_USER}@${REMOTE_HOST}:$DEST_DIR
+scp -P $REMOTE_PORT $tmp/${stamp}-nginx.conf${REMOTE_USER}@${REMOTE_HOST}:$DEST_DIR
 ```
 
 This takes `/etc/nginx/nginx.conf`, stamps it with the date, and sends it to the Windows path.
@@ -139,7 +137,7 @@ This is how they ran **every night without fail**.
 
 ## Closing
 
-These scripts run on our Azure Linux servers and **send backups to our on-prem Windows server** every night via SSH/SCP.
+I used these scripts on our Azure Linux servers and **send backups to our on-prem Windows server** every night via SSH/SCP.
 
 ---
 
