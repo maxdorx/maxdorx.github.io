@@ -3,7 +3,7 @@ title: "How I Got Hooked on Networking (and Why Security Starts Here)"
 date: 2025-08-31 00:30:00 +0000
 categories: [Journey, Networking]
 tags: [networking, cybersecurity, ccna, labs, story]
-author: Osama Siddiqui
+author: osama
 ---
 
 I was always fascinated by tech. I touched a computer for the first time when I was **very young**, and from then on, I had a habit:  
