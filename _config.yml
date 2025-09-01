@@ -28,10 +28,16 @@ url: "https://sudoosama.com"
 github:
   username: maxdorx # change to your GitHub username
 
+  authors:
+  osama:
+    name: Osama Siddiqui
+    url: https://www.linkedin.com/in/osamasiddiquii
+    email: osamasiddiqui67262@gmail.com
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
+
   name: Osama Siddiqui
   email: osamasiddiqui67262@gmail.com # change to your email address
   links:
@@ -40,7 +46,7 @@ social:
     - https://github.com/maxdorx # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://www.linkedin.com/in/osamasiddiquii
 
 # Site Verification Settings
 webmaster_verifications:
