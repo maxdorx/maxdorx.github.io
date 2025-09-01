@@ -1,37 +1,66 @@
+<!-- _includes/credly.html -->
 <div class="badges-grid">
   {% assign badges = site.data.credly.data | default: [] %}
+  {% if badges.size == 0 %}<p>No badges yet.</p>{% endif %}
+
   {% for b in badges %}
-    {% assign link = b.badge_url | default: "" %}
-    {% if link != "" %}
-      <a class="badge-card" href="{{ link }}" target="_blank" rel="noopener">
-        <img src="{{ b.badge_template.image_url }}" alt="{{ b.badge_template.name }}">
-        <div class="badge-body">
-          <h3>{{ b.badge_template.name }}</h3>
-          <p class="issuer">{{ b.badge_template.issuer.name }}</p>
-          <p class="date">Issued {{ b.issued_at | date: "%b %Y" }}</p>
-        </div>
-      </a>
-    {% else %}
-      <div class="badge-card">
-        <img src="{{ b.badge_template.image_url }}" alt="{{ b.badge_template.name }}">
-        <div class="badge-body">
-          <h3>{{ b.badge_template.name }}</h3>
-          <p class="issuer">{{ b.badge_template.issuer.name }}</p>
-          <p class="date">Issued {{ b.issued_at | date: "%b %Y" }}</p>
-        </div>
+    {% assign title = b.badge_template.name %}
+    {% assign issuer = b.badge_template.issuer.name | default: "" %}
+    {% assign img = b.badge_template.image_url | default: "" %}
+    {% assign issued = b.issued_at | default: b.created_at %}
+    {% assign expires = b.expires_at | default: b.expired_at %}
+    {% assign url = b.badge_url | default: "" %}
+    {% assign desc = b.badge_template.description | default: "" %}
+    {% assign skills = b.badge_template.skills | default: b.skills | default: [] %}
+
+    <article class="badge-card">
+      <div class="badge-media">
+        {% if img != "" %}
+          <img src="{{ img }}" alt="{{ title }}" loading="lazy" decoding="async">
+        {% endif %}
       </div>
-    {% endif %}
+
+      <div class="badge-body">
+        <h3 class="badge-title">{{ title }}</h3>
+        {% if issuer != "" %}<p class="badge-issuer">{{ issuer }}</p>{% endif %}
+
+        <p class="badge-dates">
+          {% if issued %}Issued {{ issued | date: "%b %d, %Y" }}{% endif %}
+          {% if expires %} · Expires {{ expires | date: "%b %d, %Y" }}{% endif %}
+        </p>
+
+        {% if desc != "" %}
+          <p class="badge-desc">{{ desc }}</p>
+        {% endif %}
+
+        {% if skills and skills.size > 0 %}
+          <ul class="badge-skills">
+            {% for s in skills limit: 12 %}
+              <li>{{ s.name | default: s }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+        {% if url != "" %}
+          <p><a class="badge-link" href="{{ url }}" target="_blank" rel="noopener">View badge</a></p>
+        {% endif %}
+      </div>
+    </article>
   {% endfor %}
 </div>
 
-
 <style>
-.badges-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
-.badge-card{display:flex;gap:12px;padding:12px;border:1px solid #e5e7eb;border-radius:12px;text-decoration:none;color:inherit;background:#fff}
-.badge-card img{width:64px;height:64px;object-fit:contain;border-radius:6px}
-.badge-body h3{margin:0;font-size:15px;font-weight:600}
-.badge-body .issuer,.badge-body .date{margin:0;font-size:12px;opacity:.7}
-@media(prefers-color-scheme:dark){
+.badges-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.badge-card{display:grid;grid-template-columns:80px 1fr;gap:12px;padding:14px;border:1px solid var(--border,#e5e7eb);border-radius:14px;background:var(--card,#fff)}
+.badge-media img{width:80px;height:80px;object-fit:contain;border-radius:10px}
+.badge-title{margin:0 0 2px;font-size:16px;font-weight:700}
+.badge-issuer,.badge-dates{margin:0;font-size:12px;opacity:.75}
+.badge-desc{margin:.5rem 0 0;font-size:13px;line-height:1.45}
+.badge-skills{margin:.5rem 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.badge-skills li{font-size:11px;padding:2px 8px;border:1px solid var(--chip,#e5e7eb);border-radius:999px}
+.badge-link{display:inline-block;margin-top:.5rem;padding:6px 10px;border:1px solid var(--chip,#e5e7eb);border-radius:8px;text-decoration:none}
+@media (prefers-color-scheme: dark){
   .badge-card{background:#111827;border-color:#374151}
+  .badge-skills li,.badge-link{border-color:#374151}
 }
 </style>
