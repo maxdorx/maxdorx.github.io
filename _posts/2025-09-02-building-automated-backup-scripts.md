@@ -69,7 +69,7 @@ linux-backup-scripts/
 ## Example: NGINX config snapshot
 
 ```bash
-scp -P $REMOTE_PORT $tmp/${stamp}-nginx.conf${REMOTE_USER}@${REMOTE_HOST}:$DEST_DIR
+scp -P $REMOTE_PORT $tmp/${stamp}-nginx.conf ${REMOTE_USER}@${REMOTE_HOST}:$DEST_DIR
 ```
 
 This takes `/etc/nginx/nginx.conf`, stamps it with the date, and sends it to the Windows path.
