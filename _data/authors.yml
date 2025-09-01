@@ -8,4 +8,9 @@
 
 osama:
   name: Osama Siddiqui
-  "url": "https://sudoosama.com/"
+  url: https://sudoosama.com/
+  avatar: /assets/img/avatar.png  
+  bio: "Network Security Engineer | Fortinet & Cisco | Dubai"
+  github: maxdorx
+  linkedin: osamasiddiquii
+  email: osamasiddiqui67262@gmail.com
