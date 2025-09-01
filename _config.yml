@@ -28,11 +28,7 @@ url: "https://sudoosama.com"
 github:
   username: maxdorx # change to your GitHub username
 
-  authors:
-  osama:
-    name: Osama Siddiqui
-    url: https://www.linkedin.com/in/osamasiddiquii
-    email: osamasiddiqui67262@gmail.com
+
 
 social:
   # Change to your full name.
