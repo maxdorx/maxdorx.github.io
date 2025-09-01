@@ -49,18 +49,28 @@
   {% endfor %}
 </div>
 
-<style>
 .badges-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
-.badge-card{display:grid;grid-template-columns:80px 1fr;gap:12px;padding:14px;border:1px solid var(--border,#e5e7eb);border-radius:14px;background:var(--card,#fff)}
+.badge-card{display:grid;grid-template-columns:80px 1fr;gap:12px;padding:14px;border:1px solid #e5e7eb;border-radius:14px;background:#fff}
 .badge-media img{width:80px;height:80px;object-fit:contain;border-radius:10px}
 .badge-title{margin:0 0 2px;font-size:16px;font-weight:700}
 .badge-issuer,.badge-dates{margin:0;font-size:12px;opacity:.75}
 .badge-desc{margin:.5rem 0 0;font-size:13px;line-height:1.45}
 .badge-skills{margin:.5rem 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
-.badge-skills li{font-size:11px;padding:2px 8px;border:1px solid var(--chip,#e5e7eb);border-radius:999px}
-.badge-link{display:inline-block;margin-top:.5rem;padding:6px 10px;border:1px solid var(--chip,#e5e7eb);border-radius:8px;text-decoration:none}
+.badge-skills li{font-size:11px;padding:2px 8px;border:1px solid #e5e7eb;border-radius:999px}
+.badge-link{display:inline-block;margin-top:.5rem;padding:6px 10px;border:1px solid #e5e7eb;border-radius:8px;text-decoration:none}
+
+/* Dark mode for Chirpy toggler */
+html[data-theme="dark"] .badge-card{background:#111827;border-color:#374151}
+html[data-theme="dark"] .badge-skills li,
+html[data-theme="dark"] .badge-link{border-color:#374151}
+
+/* Also support older selectors some builds use */
+html.dark .badge-card{background:#111827;border-color:#374151}
+html.dark .badge-skills li,
+html.dark .badge-link{border-color:#374151}
+
+/* Keep OS auto-dark working too */
 @media (prefers-color-scheme: dark){
   .badge-card{background:#111827;border-color:#374151}
   .badge-skills li,.badge-link{border-color:#374151}
 }
-</style>
