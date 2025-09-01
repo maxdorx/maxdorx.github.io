@@ -47,7 +47,7 @@ These jobs run **every night via cron**, so by morning, both Azure and local cop
 
 ## Repository structure
 
-Full repo: [linux-backup-scripts](https://github.com/maxdorx/linux-backup-scripts)
+Full repo: [linux-backup-scripts](https://github.com/maxdorx/server-backup-scripts)
 
 ```
 linux-backup-scripts/
