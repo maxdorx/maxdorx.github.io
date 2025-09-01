@@ -4,6 +4,7 @@ title: Services
 icon: fas fa-briefcase
 order: 4
 permalink: /services/
+comments: true
 description: Professional network and security services for businesses — from secure connectivity to compliance. Remote, with on-site in UAE.
 ---
 
@@ -30,8 +31,6 @@ description: Professional network and security services for businesses — from 
   }
 }
 </script>
-
-# Services
 
 I help businesses build secure, resilient, and scalable IT environments. Whether you need to protect a branch office, connect global teams, or prepare for compliance, I offer structured solutions with clear outcomes.
 
