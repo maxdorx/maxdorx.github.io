@@ -194,4 +194,4 @@ Use only if required by old setups. Needs `ipsec.conf` instead of swanctl and is
 
 ---
 
-If you want an Ubuntu version, scripts, or hardening steps, contact me.
+On Ubuntu, the setup is the same (just use apt instead of dnf).
