@@ -1,29 +1,32 @@
-name: Sync Credly Badges
+# .github/workflows/credly-sync.yml
+name: Sync Credly Badges (manual)
+
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "17 2 * * *"   # daily 02:17 UTC
 
 jobs:
   sync:
     runs-on: ubuntu-latest
-    permissions: { contents: write }
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
 
       - name: Fetch Credly JSON
         run: |
           mkdir -p _data
-          curl -s \
+          curl -fsSL \
             https://www.credly.com/users/67b15261-e71b-4d28-a91a-8ce2cfdf511f/badges.json \
             -o _data/credly.json
 
-      - name: Commit updated data
+      - name: Commit only if changed
         run: |
-          if [[ -n $(git status --porcelain) ]]; then
+          if [[ -n "$(git status --porcelain _data/credly.json)" ]]; then
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
             git add _data/credly.json
-            git commit -m "update Credly badges"
+            git commit -m "chore: manual Credly sync"
             git push
+          else
+            echo "No changes detected."
           fi
