@@ -2,9 +2,9 @@
 title: "FortiGate Removed SSL VPN — How I Got Linux Clients Working with IPsec on Fedora 42"
 date: 2025-09-01 17:55:00 +0400
 categories: [Networking, VPN]
-tags: [fortigate, fortios, linux, fedora, strongswan, ikev2, ipsec, vpn]
+tags: [fortigate, fortios, ssl vpn removed, linux vpn, fedora vpn, ubuntu vpn, strongswan, ikev2, ipsec tunnel, vpn setup guide]
 author: osama
-description: FortiOS 7.4.8 removed SSL VPN on some FortiGate models. Here is a working IKEv2 + strongSwan setup for Fedora 42 using swanctl.
+description: Fix FortiGate 7.4.8 SSL VPN removal. Step-by-step strongSwan IPsec (IKEv2) setup for Linux Fedora 42 and Ubuntu clients.
 image:
   path: /assets/img/posts/fortigate-linux-ipsec.png
   alt: FortiGate and Linux strongSwan
@@ -14,7 +14,7 @@ canonical_url: https://calisamaa.medium.com/fortigate-removed-ssl-vpn-heres-how-
 
 When **FortiOS 7.4.8** shipped, SSL VPN was removed on some FortiGate models. Remote access broke for users who relied on **SSL VPN tunnel mode** with FortiClient on Linux.
 
-## The problem
+## FortiGate 7.4.8 removed SSL VPN: the problem
 
 - Windows clients used **IPsec** with FortiClient.
 - Linux clients (e.g., Fedora) used **SSL VPN**, since FortiClient for Linux lacks IPsec.
@@ -25,7 +25,7 @@ I tested, searched docs and forums, and built a working **IKEv2 dial‑up IPsec*
 
 ---
 
-## Working setup: FortiGate + strongSwan (IKEv2, swanctl)
+## Linux strongSwan IPsec setup for FortiGate 7.4.8
 
 ### FortiGate (Phase 1 — dial‑up IPsec)
 
