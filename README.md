@@ -65,7 +65,6 @@
   <a href="https://github.com/maxdorx"><img src="https://img.shields.io/badge/GitHub-maxdorx-black?style=for-the-badge&logo=github" /></a>
   <a href="mailto:osamasiddiqui67262@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail" /></a>
 </p>
-
 ---
 
 <!-- Snake contribution graph -->
