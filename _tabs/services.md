@@ -73,6 +73,13 @@ Helping you meet standards without slowing the business.
 - Security baselines across systems  
 - Evidence packs for audits
 
+## Penetration Testing
+Independent security testing to uncover weaknesses before attackers do.  
+- External and internal network penetration tests  
+- Web application and API assessments  
+- Wireless security testing  
+- Clear reporting with remediation steps
+
 ---
 
 ## Engagement Models

@@ -1,0 +1,25 @@
+<div class="badges-grid">
+  {% assign badges = site.data.credly.data | default: [] %}
+  {% if badges.size == 0 %}<p>No badges yet.</p>{% endif %}
+  {% for b in badges %}
+    <a class="badge-card" href="{{ b.badge_url }}" target="_blank" rel="noopener">
+      <img src="{{ b.badge_template.image_url }}" alt="{{ b.badge_template.name }}">
+      <div class="badge-body">
+        <h3>{{ b.badge_template.name }}</h3>
+        <p class="issuer">{{ b.badge_template.issuer.name }}</p>
+        <p class="date">Issued {{ b.issued_at | date: "%b %Y" }}</p>
+      </div>
+    </a>
+  {% endfor %}
+</div>
+
+<style>
+.badges-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.badge-card{display:flex;gap:12px;padding:12px;border:1px solid #e5e7eb;border-radius:12px;text-decoration:none;color:inherit;background:#fff}
+.badge-card img{width:64px;height:64px;object-fit:contain;border-radius:6px}
+.badge-body h3{margin:0;font-size:15px;font-weight:600}
+.badge-body .issuer,.badge-body .date{margin:0;font-size:12px;opacity:.7}
+@media(prefers-color-scheme:dark){
+  .badge-card{background:#111827;border-color:#374151}
+}
+</style>
