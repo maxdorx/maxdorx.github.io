@@ -3,7 +3,7 @@ title: "FortiGate Removed SSL VPN — How I Got Linux Clients Working with IPsec
 date: 2025-09-01 17:55:00 +0400
 categories: [Networking, VPN]
 tags: [fortigate, fortios, linux, fedora, strongswan, ikev2, ipsec, vpn]
-author: Osama Siddiqui
+author: osama
 description: FortiOS 7.4.8 removed SSL VPN on some FortiGate models. Here is a working IKEv2 + strongSwan setup for Fedora 42 using swanctl.
 image:
   path: /assets/img/posts/fortigate-linux-ipsec.png
