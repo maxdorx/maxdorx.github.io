@@ -13,8 +13,6 @@ comments: true
 
 ---
 
-# Building Automated Backup Scripts for My Azure-to-Local Workflow
-
 In our environment, we already had **Azure cloud backups enabled** for business continuity. But the team wanted **nightly local copies** as an extra safety net. The requirement was simple: every night, the latest configs and data should also land on our Windows server in the office.  
 
 I decided to build a lightweight, script-driven solution for this. No extra licensing, no heavy agents — just plain Bash and `scp`.
