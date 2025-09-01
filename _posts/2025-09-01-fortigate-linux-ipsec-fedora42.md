@@ -4,6 +4,7 @@ date: 2025-09-01 17:55:00 +0400
 categories: [Networking, VPN]
 tags: [fortigate, fortios, ssl vpn removed, linux vpn, fedora vpn, ubuntu vpn, strongswan, ikev2, ipsec tunnel, vpn setup guide]
 author: osama
+comments: true
 description: Fix FortiGate 7.4.8 SSL VPN removal. Step-by-step strongSwan IPsec (IKEv2) setup for Linux Fedora 42 and Ubuntu clients.
 image:
   path: /assets/img/posts/fortigate-linux-ipsec.png
