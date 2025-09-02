@@ -2,12 +2,8 @@
 icon: fas fa-info-circle
 order: 2
 title: Origins
-image:
-  path: /assets/img/sudo-osama-logo.png
-  alt: logo sudo osama
+cover: /assets/img/sudo-osama-logo.png
 ---
-
-![logo sudo osama](/assets/img/sudo-osama-logo.png){: width="300" }
 
 # Hey 👋 I’m Osama.  
 
