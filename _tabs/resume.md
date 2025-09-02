@@ -19,16 +19,16 @@ I’m Osama, a self-taught Network Security Engineer with 4+ years of hands-on w
 
 ---
 
-## Core Skills
+### 🧰 Skills & Tools
+<p align="center">
+  <!-- skillicons: supported ones -->
+  <img src="https://skillicons.dev/icons?i=linux,redhat,ubuntu,windows,git,github,aws,azure,docker,powershell,bash,python" alt="Skills Icons" />
 
-- **Network Security**: FortiGate, Cisco ASA/Firepower, Palo Alto, Sophos, IPS/IDS, DLP, Web Filtering, NAC, WAF, IPsec/SSL VPN  
-- **Systems Administration**: Windows Server 2016–2022, Active Directory, GPO, DNS, DHCP, Linux (Ubuntu, CentOS, Red Hat), Dell PowerEdge servers  
-- **Networking**: Cisco Catalyst & Nexus, Wireless LAN Controllers, BGP, OSPF, VLANs, SD-WAN, Multi-ISP Failover  
-- **Cloud & Virtualization**: VMware ESXi, Hyper-V, AWS, Azure, Microsoft 365, Disaster Recovery, Backup Solutions  
-- **Monitoring & Security Tools**: Zabbix, PRTG, Nessus, Wazuh, Snort, Graylog, CrowdStrike, SolarWinds  
-- **Compliance & Audit**: ISO 27001/20000, SOC 2, ITIL, VAPT, Risk Assessment, Policy Enforcement  
-- **Project Delivery**: Data Center Setup, Enterprise Migrations, Multi-Site Rollouts, Disaster Recovery Planning  
-- **Soft Skills**: Leadership, Mentoring, Project Management, Problem Solving, Incident Response, Client & Vendor Communication  
+  <!-- simpleicons: missing vendors -->
+  <img src="https://cdn.simpleicons.org/vmware/607078" height="48" title="VMware" alt="VMware" />
+  <img src="https://cdn.simpleicons.org/cisco/1BA0D7" height="48" title="Cisco" alt="Cisco" />
+  <img src="https://cdn.simpleicons.org/fortinet/EE3124" height="48" title="Fortinet" alt="Fortinet" />
+</p> 
 
 ---
 
