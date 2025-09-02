@@ -20,17 +20,17 @@ I’m Osama, a self-taught Network Security Engineer with 4+ years of hands-on w
 ---
 
 ### 🧰 Skills & Tools
-<p align="left">
+<p align="center">
   <!-- skillicons: common tools -->
   <img
     src="https://skillicons.dev/icons?i=linux,redhat,ubuntu,windows,git,github,aws,azure,docker,kubernetes,terraform,ansible,jenkins,nginx,mysql,postgres,redis,grafana,prometheus,powershell,bash,python&perline=8"
     alt="Skills Icons" loading="lazy" />
 
-  <!-- simpleicons: supported brands only -->
+  <!-- simpleicons: supported vendors only -->
   <img src="https://cdn.simpleicons.org/vmware" height="48" title="VMware" alt="VMware" />
   <img src="https://cdn.simpleicons.org/cisco" height="48" title="Cisco" alt="Cisco" />
   <img src="https://cdn.simpleicons.org/fortinet" height="48" title="Fortinet" alt="Fortinet" />
- 
+</p>
 
 ---
 
