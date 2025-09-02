@@ -3,7 +3,7 @@ icon: fas fa-info-circle
 order: 2
 title: Origins
 image:
-  path: /assets/img/sudo-osama-logo.png
+  path: \assets\img\sudo-osama-logo.png
   alt: logo-sudo-osama
 ---
 
