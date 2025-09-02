@@ -7,6 +7,8 @@ image:
   alt: logo sudo osama
 ---
 
+![logo sudo osama](/assets/img/sudo-osama-logo.png){: width="300" }
+
 # Hey 👋 I’m Osama.  
 
 I’ve always been the kind of person who takes things apart just to see how they work. That habit followed me into tech — breaking, fixing, and re-building computers, networks, and servers until it finally became a career.  
