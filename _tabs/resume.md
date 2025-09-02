@@ -20,7 +20,7 @@ I’m Osama, a self-taught Network Security Engineer with 4+ years of hands-on w
 ---
 
 ### 🧰 Skills & Tools
-<p align="center">
+<p align="left">
   <!-- skillicons: common tools -->
   <img
     src="https://skillicons.dev/icons?i=linux,redhat,ubuntu,windows,git,github,aws,azure,docker,kubernetes,terraform,ansible,jenkins,nginx,mysql,postgres,redis,grafana,prometheus,powershell,bash,python&perline=8"
