@@ -20,18 +20,16 @@ I’m Osama, a self-taught Network Security Engineer with 4+ years of hands-on w
 ---
 
 ### 🧰 Skills & Tools
-<p align="center">
-  <!-- skillicons: supported ones -->
-  <img src="https://skillicons.dev/icons?i=linux,redhat,ubuntu,windows,git,github,aws,azure,docker,kubernetes,terraform,ansible,jenkins,nginx,mysql,postgres,redis,grafana,prometheus,powershell,bash,python" alt="Skills Icons" />
+<p align="left">
+  <!-- skillicons: common tools -->
+  <img
+    src="https://skillicons.dev/icons?i=linux,redhat,ubuntu,windows,git,github,aws,azure,docker,kubernetes,terraform,ansible,jenkins,nginx,mysql,postgres,redis,grafana,prometheus,powershell,bash,python&perline=8"
+    alt="Skills Icons" loading="lazy" />
 
-  <!-- simpleicons: missing vendors -->
-  <img src="https://cdn.simpleicons.org/vmware/607078" height="48" title="VMware" alt="VMware" />
-  <img src="https://cdn.simpleicons.org/cisco/1BA0D7" height="48" title="Cisco" alt="Cisco" />
-  <img src="https://cdn.simpleicons.org/fortinet/EE3124" height="48" title="Fortinet" alt="Fortinet" />
-  <img src="https://cdn.simpleicons.org/zabbix/CA1234" height="48" title="Zabbix" alt="Zabbix" />
-  <img src="https://cdn.simpleicons.org/wazuh/005C84" height="48" title="Wazuh" alt="Wazuh" />
-  <img src="https://cdn.simpleicons.org/veeam/00B336" height="48" title="Veeam" alt="Veeam" />
-</p>
+  <!-- simpleicons: supported brands only -->
+  <img src="https://cdn.simpleicons.org/vmware" height="48" title="VMware" alt="VMware" />
+  <img src="https://cdn.simpleicons.org/cisco" height="48" title="Cisco" alt="Cisco" />
+  <img src="https://cdn.simpleicons.org/fortinet" height="48" title="Fortinet" alt="Fortinet" />
  
 
 ---
