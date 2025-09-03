@@ -2,6 +2,7 @@
 icon: fas fa-info-circle
 order: 2
 title: Origins
+sitemap: false
 ---
 
 <div class="hero-cover">
