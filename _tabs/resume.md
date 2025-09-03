@@ -3,7 +3,6 @@ title: "Resume"
 icon: fas fa-file-alt
 order: 3
 layout: page
-permalink: /resume/
 ---
 
 # Osama Siddiqui
