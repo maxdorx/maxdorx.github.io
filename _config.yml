@@ -194,6 +194,20 @@ defaults:
       layout: page
       permalink: /:title/
 
+  # tags
+  - scope:
+      path: ""
+      type: tags
+    values:
+      sitemap: false
+
+  # categories
+  - scope:
+      path: ""
+      type: categories
+    values:
+      sitemap: false
+
 sass:
   style: compressed
 
@@ -217,4 +231,11 @@ exclude:
   - "*.config.js"
   - "package*.json"
 
-
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
