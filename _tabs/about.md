@@ -2,6 +2,7 @@
 icon: fas fa-info-circle
 order: 2
 title: Origins
+permalink: /about
 sitemap: false
 ---
 
