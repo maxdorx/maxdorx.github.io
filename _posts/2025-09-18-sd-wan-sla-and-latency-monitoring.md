@@ -84,7 +84,6 @@ To confirm, I ran:
 
 ```bash
 diagnose sys sdwan service 4 7
-
 ```
 
 The output showed all six ISPs alive and validated across SLA probes:
