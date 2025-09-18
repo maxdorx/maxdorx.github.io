@@ -82,9 +82,7 @@ script_includes:
 
        <div>
   <!-- pageviews -->
-  <span>
-    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url={{ page.url | absolute_url }}&title=views&count_bg=%2379C83D&title_bg=%23555555&edge_flat=false" alt="views counter"/>
-  </span>
+  <span id="view-counter">Loading views...</span>
 
   <!-- read time -->
   {% include read-time.html content=content prompt=true lang=lang %}
@@ -172,4 +170,27 @@ script_includes:
     <!-- .post-tail-bottom -->
   </div>
   <!-- div.post-tail-wrapper -->
+
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const counterEl = document.getElementById("view-counter");
+  const url = encodeURIComponent(window.location.href);
+
+  fetch(`https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=${url}&count_bg=%2379C83D&title_bg=%23555555&icon=&title=views&edge_flat=false`)
+    .then(res => res.text())
+    .then(svg => {
+      // Extract the number from the SVG text
+      const match = svg.match(/>([0-9]+)</);
+      if (match) {
+        counterEl.textContent = match[1] + " views";
+      } else {
+        counterEl.textContent = "0 views";
+      }
+    })
+    .catch(() => {
+      counterEl.textContent = "views unavailable";
+    });
+});
+</script>
+
 </article>
