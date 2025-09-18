@@ -82,7 +82,6 @@ To confirm, I ran:
 ```bash
 diagnose sys sdwan service 4 7
 
-'''bash
 Service(7): Address Mode(IPV4) flags=0x24200 use-shortcut-sla use-shortcut
 Tie break: cfg
 Shortcut priority: 2
