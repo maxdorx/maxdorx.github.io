@@ -80,39 +80,33 @@ Each ISP member participates in all three SLA checks. This way, if one target is
 
 ## Verifying in CLI
 
-To confirm, I ran:  
+To confirm, I ran:
 
 ```bash
 diagnose sys sdwan service 4 7
 
-Service(7): Address Mode(IPV4) flags=0x24200 use-shortcut-sla use-shortcut
-Tie break: cfg
-Shortcut priority: 2
-Gen(93), TOS(0x0/0x0), Protocol(0): src(1->65535):dst(1->65535), Mode(sla  hash-mode=round-robin)
-Members(6):
-1: Seq_num(5 port3 zone3), alive, sla(0x7), ...
-2: Seq_num(8 port12 zone2), alive, sla(0x7), ...
-3: Seq_num(6 port4 zone1), alive, sla(0x7), ...
-4: Seq_num(4 port2 zone1), alive, sla(0x7), ...
-5: Seq_num(2 wan2 zone1), alive, sla(0x7), ...
-6: Seq_num(7 port11 zone2), alive, sla(0x7), ...
+```
 
-Key lessons
+The output showed all six ISPs alive and validated across SLA probes:
 
-SLA design matters. One bad probe can flap an entire SD-WAN fabric.
+![command output ](/assets/img/posts/sla-diag.png)
 
-Packet loss is the real health check. Latency spikes don’t always mean link failure.
+---
 
-Pick SLA targets carefully. Google reflects regional latency; Cloudflare doesn’t.
+## Key lessons
 
-Use multiple probes. Combining 8.8.8.8, 8.8.4.4, and Google gives balanced visibility.
+- **SLA design matters.** One bad probe can flap an entire SD-WAN fabric.  
+- **Packet loss is the real health check.** Latency spikes don’t always mean link failure.  
+- **Pick SLA targets carefully.** Google reflects regional latency; Cloudflare doesn’t.  
+- **Use multiple probes.** Combining 8.8.8.8, 8.8.4.4, and Google gives balanced visibility.  
+- **Always confirm in CLI.** The GUI looks nice, but CLI proves what’s alive.  
 
-Always confirm in CLI. The GUI looks nice, but CLI proves what’s alive.
+---
 
-Closing
+## Closing
 
-End-users saw “slow internet.”
-The dashboard showed 300ms to Google.
-The real issue was broken cables under the Red Sea.
+End-users saw *“slow internet.”*  
+The dashboard showed **300ms to Google**.  
+The real issue was **broken cables under the Red Sea**.  
 
-With adjusted SLA policies and multi-target monitoring, the SD-WAN stayed stable and services continued running—even while the internet backbone itself was under repair.
+With adjusted SLA policies and multi-target monitoring, the SD-WAN stayed stable and services continued running—even while the internet backbone itself was under repair.  
