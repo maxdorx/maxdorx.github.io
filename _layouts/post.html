@@ -174,7 +174,7 @@ script_includes:
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const counterEl = document.getElementById("view-counter");
-  const url = encodeURIComponent("{{ page.url | absolute_url }}");
+  const url = "sudoosama.com{{ page.url }}";
 
   fetch(`https://hits.sh/${url}.json?increment=1`)
     .then(res => res.json())
