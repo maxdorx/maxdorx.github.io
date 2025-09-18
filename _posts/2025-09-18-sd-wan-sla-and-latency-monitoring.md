@@ -1,6 +1,6 @@
 ---
 title: "Surviving Submarine Cable Cuts with SD-WAN SLA Design"
-date: 2025-09-18 22:05:00 +0400
+date: 2025-09-18 20:58:00 +0400
 categories: [Networking, SD-WAN, Infrastructure]
 tags: [sdwan, fortigate, latency, submarine-cables, sla, isp, cloud, internet, packetloss]
 author: osama
@@ -62,13 +62,16 @@ So while Cloudflare showed 3ms, users still felt the slowdown. It hid the upstre
 
 Instead of relying on one SLA, I built three:  
 
-1. **SLA CIR** – Probes `8.8.4.4` with latency/jitter/packet loss thresholds.  
+1. **SLA CIR** – Probes `8.8.4.4` with latency/jitter/packet loss thresholds.
+   
    ![SLA CIR config](/assets/img/posts/sla-cir.png)
 
-2. **SLA Google** – Probes `google.com`, but only with **packet loss threshold active**.  
+2. **SLA Google** – Probes `google.com`, but only with **packet loss threshold active**.
+     
    ![SLA Google config](/assets/img/posts/sla-google.png)
 
-3. **SLA Alt** – Probes `8.8.8.8` with latency/jitter/packet loss thresholds.  
+3. **SLA Alt** – Probes `8.8.8.8` with latency/jitter/packet loss thresholds.
+     
    ![SLA Alt config](/assets/img/posts/sla-alt.png)
 
 Each ISP member participates in all three SLA checks. This way, if one target is unreachable or skewed, others balance it out.  
