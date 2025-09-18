@@ -171,26 +171,21 @@ script_includes:
   </div>
   <!-- div.post-tail-wrapper -->
 
-  <script>
+ <script>
 document.addEventListener("DOMContentLoaded", function() {
   const counterEl = document.getElementById("view-counter");
   const url = encodeURIComponent(window.location.href);
 
-  fetch(`https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=${url}&count_bg=%2379C83D&title_bg=%23555555&icon=&title=views&edge_flat=false`)
-    .then(res => res.text())
-    .then(svg => {
-      // Extract the number from the SVG text
-      const match = svg.match(/>([0-9]+)</);
-      if (match) {
-        counterEl.textContent = match[1] + " views";
-      } else {
-        counterEl.textContent = "0 views";
-      }
+  fetch(`https://api.countapi.xyz/hit/sudoosama.com/${url}`)
+    .then(res => res.json())
+    .then(data => {
+      counterEl.textContent = data.value + " views";
     })
     .catch(() => {
       counterEl.textContent = "views unavailable";
     });
 });
 </script>
+
 
 </article>
