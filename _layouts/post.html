@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const counterEl = document.getElementById("view-counter");
 
   // use absolute_url to make sure it's unique per post
-  const key = encodeURIComponent("{{ page.url | absolute_url }}");
+  const key = "{{ page.url | slugify }}";  // unique slug for each pos
   const namespace = "sudoosama.com";  // your live domain
 
   fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
