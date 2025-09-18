@@ -50,9 +50,7 @@ This way, links stayed online, even if latency was poor.
 
 ## Why Cloudflare wasn’t the answer
 
-I tested Cloudflare `1.1.1.1` as an SLA target. It looked great on paper—latency showed **3ms**.  
-
-I also tested Cloudflare 1.1.1.1. It showed just 3 ms latency, which looked perfect—but users were still complaining. Why? Because Cloudflare has local PoPs in Pakistan, so probes terminate inside the country. Google’s DNS (8.8.8.8) doesn’t have local nodes; traffic hairpins to India, UAE, or Singapore, which reflects the real international path. That’s why Google is a better SLA target for measuring true internet performance, while Cloudflare can give a false sense of “everything is fine.”  
+I tested Cloudflare `1.1.1.1` as an SLA target. It showed just **3ms** latency, which looked perfect—but users were still complaining. Why? Because Cloudflare has local PoPs in Pakistan, so probes terminate inside the country. Google’s DNS (8.8.8.8) doesn’t have local nodes; traffic hairpins to India, UAE, or Singapore, which reflects the real international path. That’s why Google is a better SLA target for measuring true internet performance, while Cloudflare can give a false sense of “everything is fine.”  
 
 So while Cloudflare showed 3ms, users still felt the slowdown. It hid the upstream issue, which is why **Cloudflare is not a good SLA choice** for real performance monitoring.  
 
