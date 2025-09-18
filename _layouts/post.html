@@ -82,9 +82,14 @@ script_includes:
 
         <div>
           <!-- pageviews -->
-          <span>
-            <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url={{ page.url | absolute_url }}&title=views&count_bg=%2379C83D&title_bg=%23555555&edge_flat=false" alt="views counter"/>
-          </span>
+          {% if site.pageviews.provider and site.analytics[site.pageviews.provider].id %}
+            <span>
+              <em id="pageviews">
+                <i class="fas fa-spinner fa-spin small"></i>
+              </em>
+              {{ site.data.locales[lang].post.pageview_measure }}
+            </span>
+          {% endif %}
 
           <!-- read time -->
           {% include read-time.html content=content prompt=true lang=lang %}
