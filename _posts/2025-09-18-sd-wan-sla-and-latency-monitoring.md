@@ -31,7 +31,7 @@ This post covers:
 
 The outage was not local. All six ISPs spiked to the same ~300ms latency to Google. This was a **regional upstream event**, not a provider issue.  
 
-![Google SLA latency spike](/assets/img/posts/sdwan-google-latency.png)
+![Google SLA latency spike](/assets/img/posts/sla-google.png)
 
 With latency thresholds breached, the FortiGate started failing SLA checks, causing links to flap between active/inactive. That made the problem worse.  
 
