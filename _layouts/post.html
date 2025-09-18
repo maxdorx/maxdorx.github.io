@@ -174,9 +174,12 @@ script_includes:
  <script>
 document.addEventListener("DOMContentLoaded", function() {
   const counterEl = document.getElementById("view-counter");
-  const url = encodeURIComponent(window.location.href);
 
-  fetch(`https://api.countapi.xyz/hit/sudoosama.com/${url}`)
+  // use absolute_url to make sure it's unique per post
+  const key = encodeURIComponent("{{ page.url | absolute_url }}");
+  const namespace = "sudoosama.com";  // your live domain
+
+  fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
     .then(res => res.json())
     .then(data => {
       counterEl.textContent = data.value + " views";
