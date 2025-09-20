@@ -82,7 +82,8 @@ script_includes:
 
        <div>
   <!-- pageviews -->
-  <span id="view-counter">Loading views...</span>
+    <img src="https://hits.sh/sudoosama.com{{ page.url }}/hits.svg?style=flat&label=views" alt="views" />
+    &nbsp;·&nbsp;
 
   <!-- read time -->
   {% include read-time.html content=content prompt=true lang=lang %}
@@ -170,36 +171,4 @@ script_includes:
     <!-- .post-tail-bottom -->
   </div>
   <!-- div.post-tail-wrapper -->
-
-<span id="view-counter">Loading views...</span>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const counterEl = document.getElementById("view-counter");
-  const url = "sudoosama.com{{ page.url }}";
-
-  // 1. Hidden image increments the counter (works because Referer is set)
-  const img = new Image();
-  img.src = `https://hits.sh/${url}/hits.svg?style=flat&cachebust=${Date.now()}`;
-  img.style.display = "none";
-  document.body.appendChild(img);
-
-  // 2. Fetch JSON to read the updated value
-  fetch(`https://hits.sh/${url}.json`)
-    .then(res => res.json())
-    .then(data => {
-      if (data && data.hits !== undefined) {
-        counterEl.textContent = data.hits + " views";
-      } else {
-        counterEl.textContent = "0 views";
-      }
-    })
-    .catch(err => {
-      console.error("Hits.sh error:", err);
-      counterEl.textContent = "views unavailable";
-    });
-});
-</script>
-
-
 </article>
