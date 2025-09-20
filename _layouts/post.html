@@ -174,18 +174,26 @@ script_includes:
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const counterEl = document.getElementById("view-counter");
+
+  // Build hits.sh key: domain + path (no https://, no .json in key)
   const url = "sudoosama.com{{ page.url }}";
 
   fetch(`https://hits.sh/${url}.json?increment=1`)
     .then(res => res.json())
     .then(data => {
-      counterEl.textContent = data.hits + " views";
+      if (data && data.hits !== undefined) {
+        counterEl.textContent = data.hits + " views";
+      } else {
+        counterEl.textContent = "0 views";
+      }
     })
-    .catch(() => {
+    .catch(err => {
+      console.error("Hits.sh error:", err);
       counterEl.textContent = "views unavailable";
     });
 });
 </script>
+
 
 
 </article>
