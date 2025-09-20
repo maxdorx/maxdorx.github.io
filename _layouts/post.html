@@ -174,11 +174,16 @@ script_includes:
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const counterEl = document.getElementById("view-counter");
-
-  // Build hits.sh key: domain + path (no https://, no .json in key)
   const url = "sudoosama.com{{ page.url }}";
 
-  fetch(`https://hits.sh/${url}.json?increment=1`)
+  // Fire an <img> request so hits.sh increments
+  const img = new Image();
+  img.src = `https://hits.sh/${url}/hits.svg?style=flat&cachebust=${Date.now()}`;
+  img.style.display = "none";
+  document.body.appendChild(img);
+
+  // Now fetch the JSON to display as text
+  fetch(`https://hits.sh/${url}.json`)
     .then(res => res.json())
     .then(data => {
       if (data && data.hits !== undefined) {
@@ -187,12 +192,12 @@ document.addEventListener("DOMContentLoaded", function() {
         counterEl.textContent = "0 views";
       }
     })
-    .catch(err => {
-      console.error("Hits.sh error:", err);
+    .catch(() => {
       counterEl.textContent = "views unavailable";
     });
 });
 </script>
+
 
 
 
