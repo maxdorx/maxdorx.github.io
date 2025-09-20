@@ -1,6 +1,4 @@
-/* ================================
-   About Page Cover
-   ================================ */
+/* About page cover */
 .hero-cover { margin: 0 0 1rem 0; }
 .hero-cover img {
   width: 100%;
@@ -12,82 +10,4 @@
 
 @media (min-width: 992px) {
   .hero-cover img { height: 320px; }
-}
-
-/* ================================
-   Blog Cards Modern Look
-   ================================ */
-#post-list article {
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0,0,0,.35);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-
-  &:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 28px rgba(0,0,0,.5);
-  }
-
-  img {
-    height: 200px;
-    object-fit: cover;
-  }
-
-  .card-title {
-    font-weight: 700;
-    font-size: 1.25rem;
-  }
-
-  .card-text {
-    font-size: 0.95rem;
-    color: #bbb;
-  }
-}
-
-/* ================================
-   Sidebar Styling
-   ================================ */
-#sidebar {
-  background: linear-gradient(180deg, #111, #1c1c1c);
-  border-right: 1px solid rgba(255,255,255,0.06);
-
-  a {
-    border-radius: 10px;
-    padding: 0.6rem 1rem;
-    transition: background .2s;
-
-    &:hover {
-      background: rgba(255,255,255,0.08);
-    }
-  }
-}
-
-/* ================================
-   Tags as Chips
-   ================================ */
-.tag {
-  padding: 0.3rem 0.8rem;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.1);
-  font-size: 0.8rem;
-  transition: all .2s;
-
-  &:hover {
-    background: #ff6600;
-    color: #fff;
-  }
-}
-
-/* ================================
-   Global Typography & Links
-   ================================ */
-body {
-  font-family: 'Inter', 'Segoe UI', sans-serif;
-  line-height: 1.7;
-}
-
-a {
-  color: #ff6600;
-  transition: color .2s;
-  &:hover { color: #ff8533; }
 }
