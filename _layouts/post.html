@@ -171,32 +171,33 @@ script_includes:
   </div>
   <!-- div.post-tail-wrapper -->
 
+<span id="view-counter">Loading views...</span>
+
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const counterEl = document.getElementById("view-counter");
-  const url = "sudoosama.com{{ page.url }}";
+  const url = "sudoosama.com{{ page.url }}"; // Jekyll expands this
 
-  // Fire an <img> request so hits.sh increments
-  const img = new Image();
-  img.src = `https://hits.sh/${url}/hits.svg?style=flat&cachebust=${Date.now()}`;
-  img.style.display = "none";
-  document.body.appendChild(img);
+  const apiUrl = `https://hits.sh/${url}.json?increment=1`;
+  console.log("Requesting:", apiUrl);
 
-  // Now fetch the JSON to display as text
-  fetch(`https://hits.sh/${url}.json`)
+  fetch(apiUrl)
     .then(res => res.json())
     .then(data => {
+      console.log("Response:", data);
       if (data && data.hits !== undefined) {
         counterEl.textContent = data.hits + " views";
       } else {
         counterEl.textContent = "0 views";
       }
     })
-    .catch(() => {
+    .catch(err => {
+      console.error("Hits.sh error:", err);
       counterEl.textContent = "views unavailable";
     });
 });
 </script>
+
 
 
 
