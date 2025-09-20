@@ -176,15 +176,18 @@ script_includes:
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const counterEl = document.getElementById("view-counter");
-  const url = "sudoosama.com{{ page.url }}"; // Jekyll expands this
+  const url = "sudoosama.com{{ page.url }}";
 
-  const apiUrl = `https://hits.sh/${url}.json?increment=1`;
-  console.log("Requesting:", apiUrl);
+  // 1. Hidden image increments the counter (works because Referer is set)
+  const img = new Image();
+  img.src = `https://hits.sh/${url}/hits.svg?style=flat&cachebust=${Date.now()}`;
+  img.style.display = "none";
+  document.body.appendChild(img);
 
-  fetch(apiUrl)
+  // 2. Fetch JSON to read the updated value
+  fetch(`https://hits.sh/${url}.json`)
     .then(res => res.json())
     .then(data => {
-      console.log("Response:", data);
       if (data && data.hits !== undefined) {
         counterEl.textContent = data.hits + " views";
       } else {
@@ -197,9 +200,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 </script>
-
-
-
 
 
 </article>
