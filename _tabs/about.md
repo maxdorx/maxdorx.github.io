@@ -1,7 +1,7 @@
 ---
 icon: fas fa-info-circle
 order: 2
-title: Origins
+title: Who is Osama?
 permalink: /about
 sitemap: false
 ---
