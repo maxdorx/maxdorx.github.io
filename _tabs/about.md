@@ -1,7 +1,6 @@
 ---
 icon: fas fa-info-circle
 order: 2
-title: Who is Osama?
 permalink: /about
 sitemap: false
 ---
