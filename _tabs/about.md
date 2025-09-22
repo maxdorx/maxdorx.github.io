@@ -6,10 +6,6 @@ permalink: /about
 sitemap: false
 ---
 
-<div class="hero-cover">
-  <img src="/assets/img/preview.png" alt="sudoosama cover">
-</div>
-
 # Hey 👋 I’m Osama.  
 
 I’ve always been the kind of person who takes things apart just to see how they work. That habit followed me into tech — breaking, fixing, and re-building computers, networks, and servers until it finally became a career.  
