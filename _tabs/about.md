@@ -1,10 +1,9 @@
 ---
+title: "Hey 👋 I’m Osama."
 icon: fas fa-info-circle
 order: 2
 ---
-
-# Hey 👋 I’m Osama.  
-
+ 
 I’ve always been the kind of person who takes things apart just to see how they work. That habit followed me into tech — breaking, fixing, and re-building computers, networks, and servers until it finally became a career.  
 
 Right now, I work as a **Senior Network Security Engineer**, looking after everything from firewalls and switches to servers and cloud platforms. I started out onsite, but these days I’m mostly based in Dubai, running a big chunk of enterprise infrastructure remotely.  
