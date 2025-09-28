@@ -93,3 +93,52 @@
     width: 220px;
   }
 }
+
+
+/* === Brand Accent Colors === */
+:root {
+  --accent-start: #f28c28;   /* your logo orange */
+  --accent-end: #ffb347;     /* lighter amber */
+  --accent-hover-start: #ff9d2f;
+  --accent-hover-end: #ff6f00;
+
+  /* override theme link colors */
+  --link-color: var(--accent-start);
+  --link-hover-color: var(--accent-hover-start);
+}
+
+[data-theme="dark"] {
+  --accent-start: #f28c28;
+  --accent-end: #ff9d2f;
+  --accent-hover-start: #ffb347;
+  --accent-hover-end: #ff6f00;
+
+  --link-color: var(--accent-start);
+  --link-hover-color: var(--accent-hover-start);
+}
+
+/* Gradient text links */
+a, .nav-link, .tag, .btn {
+  background-image: linear-gradient(90deg, var(--accent-start), var(--accent-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-image 0.3s ease;
+}
+
+a:hover, .nav-link:hover, .tag:hover, .btn:hover {
+  background-image: linear-gradient(90deg, var(--accent-hover-start), var(--accent-hover-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gradient button fill */
+.btn, .tag {
+  border: 1px solid var(--accent-start);
+  background: transparent;
+}
+.btn:hover, .tag:hover {
+  background: linear-gradient(90deg, var(--accent-hover-start), var(--accent-hover-end));
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+  border-color: transparent;
+}
