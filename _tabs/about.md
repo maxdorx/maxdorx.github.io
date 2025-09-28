@@ -1,7 +1,6 @@
 ---
 icon: fas fa-info-circle
 order: 2
-permalink: /about
 ---
 
 # Hey 👋 I’m Osama.  
