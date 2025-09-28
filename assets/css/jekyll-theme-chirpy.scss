@@ -12,99 +12,17 @@
 
 /* === Modern Theme Overrides === */
 
-/* Use theme variables for light/dark compatibility */
-.post-preview {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border-color, rgba(0,0,0,0.05));
-  border-radius: 16px;
-  padding: 20px;
-  margin-bottom: 24px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.post-preview:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-}
-.post-preview h2 {
-  font-size: 1.35rem;
-  font-weight: 600;
-  color: var(--text-color);
-}
-
-/* Sidebar look */
-#sidebar {
-  background: var(--sidebar-bg);
-  border-right: 1px solid var(--card-border-color, rgba(0,0,0,0.05));
-}
-#sidebar .nav-link {
-  padding: 12px 14px;
-  border-radius: 10px;
-  transition: background 0.2s ease, color 0.2s ease;
-}
-#sidebar .nav-link:hover {
-  background: var(--link-hover-bg);
-  color: var(--link-color);
-}
-
-/* Buttons and tags */
-.tag, .btn {
-  border-radius: 9999px;
-  padding: 6px 14px;
-  font-size: 0.85rem;
-  background: var(--btn-bg, transparent);
-  color: var(--text-color);
-  border: 1px solid var(--card-border-color, rgba(0,0,0,0.12));
-  transition: background 0.2s ease, color 0.2s ease, border 0.2s ease;
-}
-.tag:hover, .btn:hover {
-  background: var(--link-hover-bg);
-  color: var(--link-color);
-  border-color: var(--link-color);
-}
-
-/* Cards and widgets (recent posts, trending tags, etc.) */
-.sidebar-panel, .widget, .categories, .archives {
-  background: var(--card-bg);
-  border-radius: 12px;
-  padding: 16px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-  margin-bottom: 20px;
-}
-
-/* Search bar modern look */
-#search-input {
-  border-radius: 9999px;
-  border: 1px solid var(--card-border-color, rgba(0,0,0,0.1));
-  padding: 8px 14px;
-  transition: border 0.2s ease;
-}
-#search-input:focus {
-  border-color: var(--link-color);
-  outline: none;
-}
-
-/* Responsiveness */
-@media (max-width: 768px) {
-  .post-preview {
-    padding: 16px;
-  }
-  #sidebar {
-    width: 220px;
-  }
-}
-
-
-/* === Brand Accent Colors === */
+/* === BRAND VARIABLES === */
 :root {
-  --accent-start: #f28c28;   /* your logo orange */
-  --accent-end: #ffb347;     /* lighter amber */
+  --accent-start: #f28c28;
+  --accent-end: #ffb347;
   --accent-hover-start: #ff9d2f;
   --accent-hover-end: #ff6f00;
 
-  /* override theme link colors */
-  --link-color: var(--accent-start);
-  --link-hover-color: var(--accent-hover-start);
+  --card-bg: var(--card-background, #fff);
+  --sidebar-bg: var(--sidebar-background, #f9f9f9);
+  --text-color: var(--text, #222);
+  --card-border-color: rgba(0,0,0,0.08);
 }
 
 [data-theme="dark"] {
@@ -113,32 +31,132 @@
   --accent-hover-start: #ffb347;
   --accent-hover-end: #ff6f00;
 
-  --link-color: var(--accent-start);
-  --link-hover-color: var(--accent-hover-start);
+  --card-bg: #1b1d25;
+  --sidebar-bg: #14171f;
+  --text-color: #e5e5e5;
+  --card-border-color: rgba(255,255,255,0.08);
 }
 
-/* Gradient text links */
-a, .nav-link, .tag, .btn {
+/* === TYPOGRAPHY === */
+html {
+  font-size: clamp(15px, 1.2vw, 17px);
+}
+body {
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--main-bg, inherit);
+}
+h1, h2, h3 {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* === LINKS WITH BRAND GRADIENT === */
+a, .nav-link {
   background-image: linear-gradient(90deg, var(--accent-start), var(--accent-end));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: background-image 0.3s ease;
 }
-
-a:hover, .nav-link:hover, .tag:hover, .btn:hover {
+a:hover, .nav-link:hover {
   background-image: linear-gradient(90deg, var(--accent-hover-start), var(--accent-hover-end));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
-/* Gradient button fill */
-.btn, .tag {
-  border: 1px solid var(--accent-start);
-  background: transparent;
+/* === POST GRID CARDS === */
+#post-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 24px;
 }
-.btn:hover, .tag:hover {
+.post-preview {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border-color);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.post-preview:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+}
+.post-preview h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+/* === SIDEBAR === */
+#sidebar {
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--card-border-color);
+}
+#sidebar .nav-link {
+  padding: 12px 14px;
+  border-radius: 10px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+#sidebar .nav-link:hover {
+  background: var(--link-hover-bg, rgba(0,0,0,0.05));
+  color: var(--text-color);
+}
+
+/* === WIDGETS / PANELS === */
+.sidebar-panel, .widget, .categories, .archives {
+  background: var(--card-bg);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  margin-bottom: 20px;
+}
+
+/* === TAGS + BUTTONS === */
+.tag, .btn {
+  display: inline-block;
+  border-radius: 9999px;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: none;
+  background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
+  color: #fff !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: all 0.2s ease;
+}
+.tag:hover, .btn:hover {
   background: linear-gradient(90deg, var(--accent-hover-start), var(--accent-hover-end));
-  color: #fff;
-  -webkit-text-fill-color: #fff;
-  border-color: transparent;
+  transform: translateY(-2px);
+}
+
+/* === SEARCH BAR === */
+#search-input {
+  border-radius: 9999px;
+  border: 1px solid var(--card-border-color);
+  padding: 8px 14px;
+  transition: border 0.2s ease;
+}
+#search-input:focus {
+  border-color: var(--accent-start);
+  outline: none;
+}
+
+/* === RESPONSIVE SIDEBAR TOGGLE === */
+@media (max-width: 900px) {
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 240px;
+    height: 100%;
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+  #sidebar.open {
+    left: 0;
+  }
+  #main-wrapper {
+    margin-left: 0 !important;
+    padding: 16px;
+  }
 }
