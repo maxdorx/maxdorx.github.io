@@ -3,7 +3,6 @@ layout: page
 title: Services
 icon: fas fa-briefcase
 order: 4
-permalink: /services
 comments: true
 description: Professional network and security services for businesses — from secure connectivity to compliance. Remote, with on-site in UAE.
 ---
