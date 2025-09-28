@@ -7,7 +7,7 @@ author: osama
 image:
   path: /assets/img/posts/sdwan-latency-redsea.jpg
   alt: SD-WAN SLA and Latency Monitoring
-description: Submarine cable cuts in the Red Sea pushed latency from <50ms to 300ms+ across six ISPs. Here’s how I redesigned SLA checks in FortiGate SD-WAN to keep links stable and reliable.
+description: Submarine cable cuts in the Red Sea pushed latency from 50ms to 300ms+ across six ISPs. Here’s how I redesigned SLA checks in FortiGate SD-WAN to keep links stable and reliable.
 pin: false
 comments: true
 ---
@@ -106,4 +106,4 @@ End-users saw *“slow internet.”*
 The dashboard showed **300ms to Google**.  
 The real issue was **broken cables under the Red Sea**.  
 
-With adjusted SLA policies and multi-target monitoring, the SD-WAN stayed stable and services continued running—even while the internet backbone itself was under repair.  
+With adjusted SLA policies and multi-target monitoring, the SD-WAN stayed stable and services continued running—even while the internet backbone itself was under repair.
